@@ -1,84 +1,26 @@
-# IPO News Analysis - Python Dependencies
+# IPO News Analysis
 # ===================================================
 
 # Core Web Scraping
 googlenews==1.6.14           # Google News爬蟲套件
-requests==2.31.0             # HTTP請求庫
-beautifulsoup4==4.12.2       # HTML解析
-lxml==4.9.3                  # XML/HTML解析器（BeautifulSoup後端）
-selenium==4.15.2             # 瀏覽器自動化（備用方案）
+requests>=2.28.0,<3.0.0     # HTTP請求庫
+beautifulsoup4>=4.11.0,<5.0.0 # HTML解析
+lxml>=4.9.0,<5.0.0          # XML/HTML解析器
 
-# Data Processing & Analysis
-pandas==2.1.4                # 資料處理和分析
-numpy==1.24.4                # 數值計算
-matplotlib==3.8.2            # 資料視覺化
-seaborn==0.13.0              # 統計視覺化
-plotly==5.17.0               # 互動式圖表
-
-# Natural Language Processing
-ckiptagger==0.2.1            # 中研院繁體中文斷詞、詞性標註、實體辨識
-tensorflow==2.13.0           # TensorFlow（ckiptagger依賴）
-gdown==4.7.1                 # Google Drive下載（ckiptagger模型下載）
-nltk==3.8.1                  # 自然語言處理工具包
-transformers==4.36.2         # Hugging Face預訓練模型（繁中情感分析）
-torch==2.1.2                 # PyTorch（transformers依賴）
-spacy==3.7.2                 # 進階NLP處理
-
-# Database & Storage
-sqlalchemy==2.0.23           # ORM資料庫工具
-psycopg2-binary==2.9.9       # PostgreSQL適配器
-redis==5.0.1                 # Redis客戶端
-
-# Web API Framework
-fastapi==0.104.1             # Web API框架
-uvicorn==0.24.0              # ASGI伺服器
-pydantic==2.5.1              # 資料驗證
-python-multipart==0.0.6      # 檔案上傳支援
+# Basic Data Processing
+pandas>=1.5.0,<2.2.0        # 資料處理和分析
+numpy>=1.21.0,<1.25.0       # 數值計算
 
 # Configuration & Utilities
-pyyaml==6.0.1                # YAML配置檔處理
-python-dotenv==1.0.0         # 環境變數管理
-schedule==1.2.0              # 任務排程
-click==8.1.7                 # 命令列工具
-tqdm==4.66.1                 # 進度條顯示
-colorlog==6.8.0              # 彩色日誌輸出
+pyyaml>=6.0.0,<7.0.0         # YAML配置檔處理
+python-dotenv>=1.0.0,<2.0.0  # 環境變數管理 
+click>=8.0.0,<9.0.0          # 命令列工具
+tqdm>=4.64.0,<5.0.0          # 進度條顯示
+colorlog>=6.7.0,<7.0.0       # 彩色日誌輸出
 
-# Data Export & Import
-openpyxl==3.1.2              # Excel檔案處理
-xlsxwriter==3.1.9            # Excel寫入
-python-dateutil==2.8.2       # 日期處理
+# Data Export
+openpyxl>=3.0.0,<4.0.0       # Excel檔案處理
+python-dateutil>=2.8.0,<3.0.0 # 日期處理
 
-# Proxy & Network
-fake-useragent==1.4.0        # 隨機User-Agent
-requests-html==0.10.0        # JavaScript渲染（可選）
-httpx==0.25.2                # 異步HTTP客戶端
-
-# Testing & Development
-pytest==7.4.3               # 測試框架
-pytest-cov==4.1.0           # 測試覆蓋率
-black==23.11.0               # 程式碼格式化
-flake8==6.1.0                # 程式碼風格檢查
-mypy==1.7.1                  # 類型檢查
-
-# Production & Deployment
-gunicorn==21.2.0             # WSGI HTTP伺服器
-docker==6.1.3               # Docker API客戶端
-supervisor==4.2.5            # 程序監控
-
-# Data Science (進階分析用)
-scikit-learn==1.3.2         # 機器學習
-scipy==1.11.4               # 科學計算
-statsmodels==0.14.0         # 統計建模
-
-# News Content Analysis
-newspaper3k==0.2.8          # 新聞文章解析
-readability==0.3.1          # 文章可讀性分析
-
-
-# Monitoring & Logging
-sentry-sdk==1.38.0          # 錯誤監控
-prometheus-client==0.19.0    # 指標監控
-
-# Anti-Detection
-undetected-chromedriver==3.5.4  # 反偵測Chrome驅動
-playwright==1.40.0          # 現代瀏覽器自動化
+# Network Tools
+fake-useragent>=1.4.0,<2.0.0 # 隨機User-Agent

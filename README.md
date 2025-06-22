@@ -1,16 +1,20 @@
 # IPO News Analysis
 
-This project contains utilities for crawling and analyzing IPO related news.
+This project provides a simple crawler that gathers news about IPOs using the
+`GoogleNews` library. The crawler can be run from the command line and stores
+retrieved articles as JSON files.
 
-## Running the crawler
+## Data directory
 
-The crawler package lives under `src/crawler/`. Run it directly with module path:
+All crawled data is written to the `data` directory at the repository root.
+The crawler will create this directory automatically if it does not already
+exist. The path is exposed in the code via the constant `DATA_DIR`.
+
+## Usage
 
 ```bash
-python -m src.crawler
+python -m crawler "IPO" --days 7 --pages 3
 ```
 
-Or add `src` to `PYTHONPATH` and use the short module name:
-
-```bash
-PYTHONPATH=src python -m crawler
+The command above searches for "IPO" news from the last seven days and saves the
+results to a timestamped JSON file inside `data/`.

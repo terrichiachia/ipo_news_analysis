@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  ipo-crawler:
+    build: .
+    container_name: ipo-news-crawler
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - PYTHONPATH=/app/src 
+      - PYTHONUNBUFFERED=1
+    command: ["python", "-m", "src.crawler", "IPO 新聞", "--days", "7", "--pages", "3"]
+    restart: unless-stopped
+    
